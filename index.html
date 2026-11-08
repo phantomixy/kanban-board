@@ -7,6 +7,34 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+      <h1 id="title-site">Моя Kanban-дошка</h1>
+    </header>
+    <form id="task-container">
+      <label id="new-task" for="input-task">Нова задача</label>
+      <input id="input-task" type="text" placeholder="Що треба зробити?" />
+      <button type="submit" id="add-task">Додати</button>
+    </form>
+    <main>
+      <div class="column" data-status="todo" id="todo-column">
+        <h2 class="text-in-ul">До виконання</h2>
+        <div class="line-in-board"></div>
+        <ul id="todo-list">
+          <li class="task-item" draggable="true">Завдання 1</li>
+          <li class="task-item" draggable="true">Завдання 2</li>
+        </ul>
+      </div>
+      <div class="column" data-status="in-progress" id="in-progress-column">
+        <h2 class="text-in-ul">В процесі</h2>
+        <div class="line-in-board"></div>
+        <ul id="in-progress-list"></ul>
+      </div>
+      <div class="column" data-status="done" id="done-column">
+        <h2 class="text-in-ul">Виконано</h2>
+        <div class="line-in-board"></div>
+        <ul id="done-list"></ul>
+      </div>
+    </main>
     <script src="app.js"></script>
   </body>
 </html>
